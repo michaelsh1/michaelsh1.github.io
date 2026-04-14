@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support — Intervalue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --border: #242424;
+      --text-primary: #f0ece4;
+      --text-secondary: #7a7570;
+      --accent: #c8b89a;
+      --accent-dim: rgba(200, 184, 154, 0.12);
+    }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      padding: 0 24px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 0 96px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 56px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+    .back-link::before { content: '←'; font-size: 14px; }
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 40px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+    .contact-block p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+    .contact-block a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(200, 184, 154, 0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .contact-block a:hover { border-color: var(--accent); }
+    .doc h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .doc p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+    .doc ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+    .doc ul li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="/">Home</a>
+
+    <p class="eyebrow">Intervalue</p>
+    <h1>Support</h1>
+
+    <div class="contact-block">
+      <p>Have a question, bug report, or feature request? Send an email and I'll get back to you as soon as possible.</p>
+      <a href="mailto:your@email.com">your@email.com</a>
+      <!-- ↑ Replace with your actual email -->
+    </div>
+
+    <hr>
+
+    <div class="doc">
+      <h2>Frequently asked questions</h2>
+
+      <h2>How do I create a custom interval?</h2>
+      <p>
+        Tap the + button on the main screen to create a new interval. You can set the work duration, rest duration, number of rounds, and give it a name.
+      </p>
+
+      <h2>Can I use the app without sound?</h2>
+      <p>
+        Yes. The app works in silent mode. Visual cues on screen indicate phase transitions even when audio is off.
+      </p>
+
+      <h2>How do I delete a workout?</h2>
+      <p>
+        Swipe left on any workout in the list to reveal the delete button.
+      </p>
+
+      <h2>The app crashed — what should I do?</h2>
+      <p>
+        Please email me with your device model and iOS version, and a short description of what you were doing when it crashed. This helps me fix it quickly.
+      </p>
+    </div>
+  </main>
+  <footer>© Intervalue</footer>
+</body>
+</html>
