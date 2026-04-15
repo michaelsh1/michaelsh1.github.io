@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InterValue — Support</title>
+  <style>
+    :root {
+      --bg:        #111113;
+      --surface:   #1c1c1e;
+      --surface2:  #2c2c2e;
+      --border:    rgba(255,255,255,0.08);
+      --text:      #f2f2f7;
+      --muted:     #8e8e93;
+      --coral:     #ff6b6b;
+      --green:     #6bcb77;
+      --yellow:    #ffd93d;
+      --purple:    #a29bfe;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 64px 24px 40px;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .app-dot-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    header h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 span { color: var(--coral); }
+
+    header p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 40px 0 12px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    /* ── FAQ row ── */
+    details {
+      border-bottom: 1px solid var(--border);
+    }
+
+    details:last-child { border-bottom: none; }
+
+    summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      font-weight: 500;
+      cursor: pointer;
+      gap: 16px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--surface2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .chevron svg { display: block; }
+
+    details[open] .chevron { transform: rotate(180deg); }
+
+    .answer {
+      padding: 0 20px 16px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--coral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg { display: block; }
+
+    .contact-text h3 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .contact-text a {
+      color: var(--coral);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .contact-text a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 0 24px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="app-dot-row">
+      <div class="dot" style="background:var(--coral)"></div>
+      <div class="dot" style="background:var(--yellow)"></div>
+      <div class="dot" style="background:var(--green)"></div>
+      <div class="dot" style="background:var(--purple)"></div>
+    </div>
+    <h1>Inter<span>Value</span> Support</h1>
+    <p>Interval training, your way. We're here to help.</p>
+  </header>
+
+  <main>
+
+    <p class="section-label">Frequently Asked Questions</p>
+
+    <div class="card">
+
+      <details open>
+        <summary>
+          How do I create a new workout?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          Tap the <strong>+</strong> button on the main screen. Give your workout a name, then add intervals using the <strong>Add Interval</strong> button. Each interval has a name, duration, and color you can customize. Tap <strong>Save</strong> when you're done.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Can I reorder intervals within a workout?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          Yes. While editing a workout, press and hold the drag handle (the three lines icon) on any interval row and drag it to the desired position.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          How do I set the number of rounds?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          In the workout editor, you'll find a <strong>Rounds</strong> setting. Tap it to set how many times the full interval sequence repeats. The total workout duration updates automatically as you adjust rounds.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Does the timer run in the background?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          Yes. Once a workout is running, you can lock your screen or switch apps and the timer will continue. Audio cues and notifications will fire at each interval transition.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          What does the AI feature do?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          The AI assistant can generate a complete workout for you based on a natural language description — just describe your goal (e.g. "20-minute HIIT with 3 exercises") and it will create the intervals automatically. Usage is limited to a small number of requests per day.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          How do I change the app theme or colors?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          Go to <strong>Settings</strong> (gear icon) and choose between System, Light, or Dark mode. Individual interval colors can be changed inside the workout editor by tapping the color swatch next to each interval.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          My data disappeared after reinstalling. Can I recover it?
+          <span class="chevron">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1l4 4 4-4" stroke="#8e8e93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <p class="answer">
+          InterValue stores all workouts locally on your device. If you uninstall the app, local data is removed by iOS. Make sure iCloud Backup is enabled on your device so your data is included in device backups. Cloud sync between devices is not currently supported.
+        </p>
+      </details>
+
+    </div>
+
+    <p class="section-label">Get in Touch</p>
+
+    <div class="contact-card">
+      <div class="contact-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+          <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="contact-text">
+        <h3>Email Support</h3>
+        <a href="mailto:support@intervalue.app">support@intervalue.app</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <a href="../privacy-policy/">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
